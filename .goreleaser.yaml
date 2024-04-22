@@ -1,6 +1,6 @@
 # Make sure to check the documentation at https://goreleaser.com
 env:
-  - GIT_URL=https://github.com/soulteary/google-gemini-openai-proxy
+  - GIT_URL=https://github.com/vital121/google-gemini-openai-proxy
 before:
   hooks:
     - go mod tidy
