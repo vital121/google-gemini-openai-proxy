@@ -38,6 +38,8 @@ func NewStripPrefixConverter(prefix string) *StripPrefixConverter {
 }
 
 func GetOptionFromEnv(key string) string {
+	
+	log.Printf("GetOptionFromEnv : %s -> %s", key,viper.GetString(key))
 	return strings.TrimSpace(viper.GetString(key))
 }
 
