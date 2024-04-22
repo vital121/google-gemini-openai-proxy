@@ -102,6 +102,7 @@ func Proxy(c *gin.Context, requestConverter RequestConverter) {
 			return
 		}
 		req.Header.Set("Authorization", token)
+		req.Header.Set("ngrok-skip-browser-warning", "xxxxxxxx")
 
 		payloadJSON, err := json.Marshal(payload)
 		if err != nil {
