@@ -73,7 +73,7 @@ func Proxy(c *gin.Context, requestConverter RequestConverter) {
 		var safetySettings []GeminiSafetySettings
 		safetySettings = append(safetySettings, GeminiSafetySettings{
 			Category:  "HARM_CATEGORY_DANGEROUS_CONTENT",
-			Threshold: "BLOCK_ONLY_HIGH",
+			Threshold: "BLOCK_NONE",
 		})
 		payload.SafetySettings = safetySettings
 
