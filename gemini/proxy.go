@@ -117,7 +117,7 @@ func Proxy(c *gin.Context, requestConverter RequestConverter) {
 			return
 		}
 
-		log.Printf("proxying request [%s] %s -> %s", model, originURL, maskURL.ReplaceAllString(req.URL.String(), "key=******"))
+		log.Printf("proxying request [%s] %s -> %s", model, originURL, req.URL.String())
 	}
 
 	proxy := &httputil.ReverseProxy{Director: director}
