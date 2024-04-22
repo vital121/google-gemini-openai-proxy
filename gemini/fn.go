@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
-
+	"log"
 	"github.com/soulteary/google-gemini-openai-proxy/define"
 	"github.com/spf13/viper"
 )
@@ -47,6 +47,9 @@ func GetInstance() (err error) {
 	apikey := GetOptionFromEnv(define.ENV_GEMINI_API_KEY)
 	modelName := GetOptionFromEnv(define.ENV_GEMINI_MODEL_NAME)
 
+	log.Printf("endpoint : %s", endpoint)
+	log.Printf("apiKey : %s", apikey)
+	log.Printf("modelName : %s", modelName)
 	if endpoint == "" {
 		endpoint = define.DEFAULT_REST_API_ENTRYPOINT
 	}
